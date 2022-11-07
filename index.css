@@ -1,0 +1,160 @@
+#loadingMapText
+{
+    position: absolute;
+    top: 50px;
+    left: 250px;
+}
+ 
+p
+{
+    font-family: Arial;
+}
+ 
+#statSVG
+{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+}
+ 
+#newsDiv
+{
+    position: absolute;
+    border-style: solid;
+    border-width: 3px;
+    border-color: blue;
+    //width: 620px;
+    width: 50%;
+    height: 700px;
+    left: 243px;
+    z-index: 3;
+    overflow: hidden;
+    visibility: hidden;
+}
+ 
+#newsCloseImg
+{
+    position: absolute;
+    right: 0px;
+}
+ 
+#newsIFrame
+{
+    position: absolute;
+    width: 100%;
+    height: 840px;
+    //border-style: solid;
+    //border-width: 3px;
+    //border-color: blue;
+    margin-top: -140px;
+}
+ 
+#theMap
+{
+    position: absolute;
+    //width: 1265px;
+    //width: 100%;
+    height: 700px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    right: 1px;
+    left: 243px;
+    z-index: 2;
+}
+ 
+#mapViewOptions
+{
+    position: absolute;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    width: 225px;
+    left: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+ 
+#locationSearch
+{
+    width: 200px;
+    //padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+ 
+#locationSearchText
+{
+}
+ 
+#visualisationText
+{
+}
+ 
+#visualButtonText
+{
+    font-weight: bold;
+}
+ 
+#filters
+{
+    position: absolute;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    width: 225px;
+    //height: 500px;
+    //left: 1285px;
+    left: 1px;
+    top: 300px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+ 
+#dateText
+{
+    position: relative;
+}
+ 
+#fromDateSelect
+{
+    position: relative;
+    width: 100px;
+}
+ 
+#crimeTypeText
+{
+    position: relative;
+}
+ 
+#crimeTypeSelect
+{
+    position: relative;
+    width: 200px;
+}
+ 
+#contextText
+{
+    position: relative;
+}
+ 
+#contextSelect
+{
+    position: relative;
+    width: 200px;
+}
+ 
+#filtersSubmit
+{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    //top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
