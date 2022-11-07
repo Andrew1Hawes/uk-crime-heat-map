@@ -1,0 +1,39 @@
+Firstly, the following PHP code will allow me to connect to the database named ‘Project’ from the localhost server. 
+The data for each parameter is assigned first to variables, and then these variables are passed when instantiating the 
+new MySQL connection to the database.
+
+$servername << 'localhost'
+$username << 'root'
+$password << ''
+$dbname << 'Project'
+$conn << new mysqli($servername, $username, $password, $dbname)
+
+The statement ‘SHOW TABLES’ returns the table names from the database connected. This will be used to retrieve the 
+list of months available, as each table contains one month of data and is named correspondingly. The ‘query’ method 
+takes the SQL statement as it’s parameter and queries the database, returning the result.
+
+$sql << "SHOW TABLES"
+$result << $conn->query($sql)
+
+The ‘SELECT DISTINCT’ statement returns only the different values from the specified field. Therefore, this can be 
+used to get all of the different crime types for the user to select, which would be better than hardcoding the crime 
+types in as different data used may not have the same crime type values. The following SQL statement will be used 
+which selects all the distinct values in the ‘Crime type’ field from the table ‘2011-01’.
+
+"SELECT DISTINCT `Crime type` FROM `2011-01`;"
+
+The following two statements should finally get all the data records from the database table for the specified month, 
+which is stored as the ‘fromDate’ variable. The date is concatenated to the rest of the SQL query string using a 
+period (.). Separating the data into two variables for crime location and the information should help keep better 
+organisation of the code as the data is separated for it’s different purposes. 
+
+"SELECT Latitude, Longitude FROM `" . $fromDate . "`;"
+
+"SELECT `Crime ID`, `Reported by`, `Falls within`, `Location`, `LSOA code`, `LSOA name`, `Crime type`, 
+`Last outcome category`, `Context` FROM `" . $fromDate . "`;"
+
+Even though these will return all records, a ‘WHERE’ clause can be concatenated to the end to extract only those 
+records that fulfil a specified condition.
+
+“WHERE `Crime type` = ‘Robbery’;”
+
